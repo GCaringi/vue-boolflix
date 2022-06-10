@@ -5,7 +5,14 @@ import App from './App.vue'
   VUE LANG CODE FLAGS
 ----------------------*/
 import LangFlag from 'vue-lang-code-flags';
- 
+
+/*--------------------
+      FONTASWESOME
+---------------------*/
+import '@fortawesome/fontawesome-free/css/all.css';
+import '@fortawesome/fontawesome-free/js/all.js';
+
+
 Vue.component('lang-flag', LangFlag);
 
 Vue.config.productionTip = false
