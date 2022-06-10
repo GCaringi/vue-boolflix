@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img src="" alt="I  ">
+    <img :src= getUrl() alt="I  ">
     {{elem.title || elem.name}}
     {{elem.original_title || elem.original_name}}
     {{elem.original_language}}
@@ -18,6 +18,11 @@ export default {
     props: {
         elem: {
             type: Object,
+        }
+    },
+    methods: {
+        getUrl(){
+            return `https://image.tmdb.org/t/p/w342` + `${this.elem.poster_path}`;
         }
     },
     components: {
