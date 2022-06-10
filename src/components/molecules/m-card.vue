@@ -3,9 +3,8 @@
     <img :src= getUrl() alt="IMG">
     {{elem.title || elem.name}}
     {{elem.original_title || elem.original_name}}
-    {{elem.original_language}}
     <lang-flag :iso = "elem.original_language" :squared = "false"/>
-    {{elem.vote_average}}
+    {{average}}
     <i
     v-for = "(star, idx) in getFullStar"
     :key = "idx" 
@@ -50,7 +49,7 @@ export default {
             return this.average | 0
         },
         getHalfStar(){
-            return this.average - (this.average | 0) === 0.5 ? 1 : 0;
+            return this.average - (this.average | 0) >= 0.5 ? 1 : 0;
         },
         getEmptyStar(){
             return 5 - this.getFullStar - this.getHalfStar;
