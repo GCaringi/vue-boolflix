@@ -1,9 +1,10 @@
 <template>
   <div>
-    {{elem.title}}
-    {{elem.original_title}}
+    <img src="" alt="I  ">
+    {{elem.title || elem.name}}
+    {{elem.original_title || elem.original_name}}
     {{elem.original_language}}
-    <lang-flag :iso = elem.original_language squared = " true "/>
+    <lang-flag :iso = "elem.original_language" :squared = "false"/>
     {{elem.vote_average}}
   </div>
 </template>
@@ -16,7 +17,7 @@ export default {
     name: "cardItem",
     props: {
         elem: {
-            type: Array,
+            type: Object,
         }
     },
     components: {
@@ -25,8 +26,6 @@ export default {
 }
 </script>
 
-<style lang = "css">
-    .cs{
-        font-size: 20px
-    }
+<style lang = "scss">
+
 </style>
