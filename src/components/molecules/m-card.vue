@@ -6,9 +6,10 @@
     <card-title
     :title = "elem.title || elem.name"
     />
-
-    {{elem.title || elem.name}}
-    {{elem.original_title || elem.original_name}}
+    <card-original-title
+    :originalTitle = "elem.original_title || elem.original_name"
+    />
+    
     <lang-flag :iso = "elem.original_language" :squared = "false"/>
     {{average}}
     <!-- <i
@@ -31,6 +32,7 @@
 import LangFlag from 'vue-lang-code-flags';
 import cardImg from '../atoms/a.cardImg.vue';
 import cardTitle from '../atoms/a.cardTitle.vue'
+import cardOriginalTitle from '../atoms/a-cardOriginalTitle.vue'
 
 export default {
     name: "cardItem",
@@ -67,6 +69,7 @@ export default {
         LangFlag,
         cardImg,
         cardTitle,
+        cardOriginalTitle,
     }
 }
 </script>

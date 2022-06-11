@@ -1,19 +1,19 @@
 <template>
   <div>
-    <h2>Titolo:</h2><span>{{title}}</span>
+    <h2>Titolo Originale</h2>
+    <span>{{originalTitle}}</span>
   </div>
 </template>
 
 <script>
 export default {
-    name: "cardTitle",
+    name: "cardOriginalTitle",
     props: {
-        title: {
+        originalTitle: {
             type: String,
             required: true,
         }
     }
-
 }
 </script>
 

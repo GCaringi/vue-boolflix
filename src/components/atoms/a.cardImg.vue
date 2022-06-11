@@ -8,6 +8,7 @@ export default {
     props: {
         url: {
             type: String,
+            required: false,
             default: require("@/assets/img/404-img-not-found.png"),
         }
     }
