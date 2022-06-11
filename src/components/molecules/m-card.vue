@@ -3,6 +3,10 @@
     <card-img
     :url = getUrl()
     />
+    <card-title
+    :title = "elem.title || elem.name"
+    />
+
     {{elem.title || elem.name}}
     {{elem.original_title || elem.original_name}}
     <lang-flag :iso = "elem.original_language" :squared = "false"/>
@@ -25,7 +29,8 @@
 <script>
 
 import LangFlag from 'vue-lang-code-flags';
-import CardImg from '../atoms/a.cardImg.vue';
+import cardImg from '../atoms/a.cardImg.vue';
+import cardTitle from '../atoms/a.cardTitle.vue'
 
 export default {
     name: "cardItem",
@@ -60,7 +65,8 @@ export default {
     },
     components: {
         LangFlag,
-        CardImg,
+        cardImg,
+        cardTitle,
     }
 }
 </script>
