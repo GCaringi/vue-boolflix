@@ -1,11 +1,13 @@
 <template>
   <div>
-    <img :src= getUrl() alt="IMG">
+    <card-img
+    :url = getUrl()
+    />
     {{elem.title || elem.name}}
     {{elem.original_title || elem.original_name}}
     <lang-flag :iso = "elem.original_language" :squared = "false"/>
     {{average}}
-    <i
+    <!-- <i
     v-for = "(star, idx) in getFullStar"
     :key = "idx" 
     class="fa-solid fa-star"></i>
@@ -16,13 +18,14 @@
     <i
     v-for = "(star) in getEmptyStar"
     :key = "star"
-    class="fa-regular fa-star"></i>
+    class="fa-regular fa-star"></i> -->
 </div>
 </template>
 
 <script>
 
 import LangFlag from 'vue-lang-code-flags';
+import CardImg from '../atoms/a.cardImg.vue';
 
 export default {
     name: "cardItem",
@@ -39,7 +42,7 @@ export default {
     methods: {
         getUrl(){
             if (this.elem.poster_path === null){
-                return ""
+                return undefined;
             }
             return `https://image.tmdb.org/t/p/w342` + `${this.elem.poster_path}`;
         }
@@ -57,6 +60,7 @@ export default {
     },
     components: {
         LangFlag,
+        CardImg,
     }
 }
 </script>
