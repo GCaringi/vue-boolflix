@@ -1,6 +1,6 @@
 <template>
-  <main>
-    <ul>
+  <main class = "">
+    <ul class = "flex">
         <li
         v-for = "(element, index) in sharedData.objList"
         :key = "index"

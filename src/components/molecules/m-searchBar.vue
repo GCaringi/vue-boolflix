@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <form @submit.prevent="getApiCall()">
+    <div class="flex  max-w-full">
+        <form @submit.prevent="getApiCall()" class="flex items-center gap-x-2 pr-3">
             <selectField/>
             <inputField
             v-model="searchText"
@@ -15,6 +15,7 @@
 
 import axios from 'axios'
 import sharedData from '../../shared/sharedData'
+
 import selectField from '../atoms/a.select.vue'
 import inputField from '../atoms/a.input.vue'
 import submitBtn from '../atoms/a.button.vue'

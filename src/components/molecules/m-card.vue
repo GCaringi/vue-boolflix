@@ -50,15 +50,6 @@ export default {
         }
     },
     computed: {
-        getFullStar(){
-            return this.average | 0
-        },
-        getHalfStar(){
-            return this.average - (this.average | 0) >= 0.5 ? 1 : 0;
-        },
-        getEmptyStar(){
-            return 5 - this.getFullStar - this.getHalfStar;
-        }
     },
     components: {
         cardImg,

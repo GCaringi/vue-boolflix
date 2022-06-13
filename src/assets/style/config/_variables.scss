@@ -1,0 +1,75 @@
+/*--------------
+    VARIABLES
+--------------*/
+
+:root{
+    /*--------------
+        COLORS   
+    ---------------*/  
+    --clr-base-light: #ffffff;
+    --clr-base-dark: #000000;
+    --clr-primary: #000002;
+    --clr-secondary: #1C1C1C;
+    --clr-tertiary: #303030;
+    --clr-socialLinks: #797979;
+
+    /*---------------
+          LAYOUT
+    ----------------*/    
+    /*    Containers    */
+    --width-xxs: 15rem;
+    --width-xs: 20rem;
+    --width-sm: 30rem;
+    --width-md: 45rem;
+    --width-lg: 60rem;
+    --width-xl: 75rem;
+    --width-xxl: 90rem;
+
+    /*    Layout element size    */
+
+
+    /*    Graphics element size    */
+    --logo-size: 10rem;
+    --select-size: 7rem;
+
+    /*---------------
+          SPACING
+    ----------------*/
+    --space-unit: .0625rem;
+
+    --space-xxxs: .125rem;
+    --space-xxs: .25rem;
+    --space-xs: .3125rem;
+    --space-sm: .5rem;
+    --space-md: .625rem;
+    --space-lg: .75rem;
+    --space-xl: 1rem;
+    --space-xxl: 1.25rem;
+    --space-xxxl: 1.5rem;
+    
+    --space-largest: 2rem;
+
+    /*------------------
+          FONT SIZE
+    -------------------*/
+    --fs-xxs: .625rem;
+    --fs-xs: .75rem;
+    --fs-sm: .875rem;
+    --fs-md: 1rem;
+    --fs-lg: 1.125rem;
+    --fs-xl: 1.25rem;
+    --fs-xxl: 1.5rem;
+
+    /*------------------
+          FONT WEIGHT
+    -------------------*/
+    --fw-xxs: 100;
+    --fw-xs: 200;
+    --fw-sm: 300;
+    --fw-md: 400;
+    --fw-lg: 500;
+    --fw-xl: 600;
+    --fw-xxl: 700;
+    --fw-xxxl: 800;
+    --fw-bold: bold;
+}

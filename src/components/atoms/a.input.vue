@@ -1,5 +1,6 @@
 <template>
-    <input type="text" name="searchFiled" 
+    <input type="text" name="searchFiled"
+    class = "" 
     :value= "textSearch"
     @input= "$emit('input', $event.target.value)"
     >

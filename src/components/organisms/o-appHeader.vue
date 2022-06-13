@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class = "flex items-center justify-between bg-[color:var(--clr-primary)]">
     <appLogo/>
     <searchBar/>
   </header>

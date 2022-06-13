@@ -1,5 +1,7 @@
 <template>
-    <div>Logo</div>
+    <img src="../../assets/img/logo.png" alt="Logo image"
+        class="max-w-[var(--logo-size)] p-3"
+    >
 </template>
 
 <script>
