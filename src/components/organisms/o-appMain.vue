@@ -1,9 +1,10 @@
 <template>
   <main class = "bg-[color:var(--clr-primary)] min-h-screen text-white">
-    <ul class = "flex list-none">
+    <ul class = "flex list-none grid grid-cols-5">
         <li
         v-for = "(element, index) in filterItems"
         :key = "index"
+        class = ""
         >
             <card
             :elem = "element"
