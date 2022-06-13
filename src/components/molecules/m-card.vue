@@ -1,38 +1,32 @@
 <template>
   <div>
     <card-img
-    :url = getUrl()
+        :url = getUrl()
     />
     <card-title
-    :title = "elem.title || elem.name"
+        :title = "elem.title || elem.name"
     />
     <card-original-title
-    :originalTitle = "elem.original_title || elem.original_name"
+        :originalTitle = "elem.original_title || elem.original_name"
     />
-    
-    <lang-flag :iso = "elem.original_language" :squared = "false"/>
+    <cardFlag
+        :language = "elem.original_language"
+    />
     {{average}}
-    <!-- <i
-    v-for = "(star, idx) in getFullStar"
-    :key = "idx" 
-    class="fa-solid fa-star"></i>
-    <i
-    v-for = "(star) in getHalfStar"
-    :key = "star"
-    class="fa-regular fa-star-half-stroke"></i>
-    <i
-    v-for = "(star) in getEmptyStar"
-    :key = "star"
-    class="fa-regular fa-star"></i> -->
+    <average-stars
+        :value = "average"
+    />
+
 </div>
 </template>
 
 <script>
 
-import LangFlag from 'vue-lang-code-flags';
 import cardImg from '../atoms/a.cardImg.vue';
 import cardTitle from '../atoms/a.cardTitle.vue'
 import cardOriginalTitle from '../atoms/a-cardOriginalTitle.vue'
+import cardFlag from '../atoms/a-cardFlag.vue'
+import averageStars from '../atoms/a-averageStar.vue'
 
 export default {
     name: "cardItem",
@@ -43,6 +37,7 @@ export default {
     },
     data() {
         return {
+            flag: true,
             average: this.elem.vote_average / 2,
         }
     },
@@ -66,10 +61,12 @@ export default {
         }
     },
     components: {
-        LangFlag,
         cardImg,
         cardTitle,
         cardOriginalTitle,
+        cardFlag,
+        averageStars,
+
     }
 }
 </script>
