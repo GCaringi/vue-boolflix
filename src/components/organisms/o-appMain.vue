@@ -1,8 +1,8 @@
 <template>
-  <main class = "">
-    <ul class = "flex">
+  <main class = "bg-[color:var(--clr-primary)] min-h-screen text-white">
+    <ul class = "flex list-none">
         <li
-        v-for = "(element, index) in sharedData.objList"
+        v-for = "(element, index) in filterItems"
         :key = "index"
         >
             <card
@@ -26,6 +26,17 @@ export default {
     data(){
         return {
             sharedData,
+        }
+    },
+    computed:{
+        filterItems(){
+            if (this.sharedData.filter === "all"){
+                return sharedData.objList;
+            }else{
+                return sharedData.objList.filter((element) => {
+                    return element.genre_ids.includes(Number(this.sharedData.filter))
+                })
+            }
         }
     }
 }

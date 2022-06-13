@@ -1,6 +1,6 @@
 <template>
     <div>
-        <select name="" id="" 
+        <select @change ="changeFilter($event)" name="" id="" v-model="localComponentData.filter"
         class="max-w-[var(--select-size)]"> 
             <option value="all">All</option>
             <option 
@@ -23,6 +23,11 @@ export default {
     data(){
         return {
             localComponentData: sharedData,
+        }
+    },
+    methods:{
+        changeFilter(event){
+            this.localComponentData.filter = event.target.value;
         }
     },
     created(){
