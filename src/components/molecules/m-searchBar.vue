@@ -1,6 +1,6 @@
 <template>
     <div class="flex  max-w-full">
-        <form @submit.prevent="getApiCall()" class="flex items-center gap-x-2 pr-3">
+        <form @submit.prevent="getApiCall()" class="flex items-center gap-x-2 pr-3" autocomplete="off">
             <selectField/>
             <inputField
             v-model="searchText"

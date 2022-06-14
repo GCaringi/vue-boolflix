@@ -1,7 +1,7 @@
 <template>
     <div>
         <select @change ="changeFilter($event)" name="" id="" v-model="localComponentData.filter"
-        class="max-w-[var(--select-size)]"> 
+        class="max-w-[var(--select-size)] rounded-md"> 
             <option value="all">All</option>
             <option 
                 v-for = "(genre,index) in localComponentData.genreList"

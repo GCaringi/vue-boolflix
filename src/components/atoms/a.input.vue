@@ -1,6 +1,6 @@
 <template>
-    <input type="text" name="searchFiled"
-    class = "" 
+    <input type="text" name="searchFiled" placeholder="Cerca film o serie..."
+    class = "rounded-md pl-1" 
     :value= "textSearch"
     @input= "$emit('input', $event.target.value)"
     >

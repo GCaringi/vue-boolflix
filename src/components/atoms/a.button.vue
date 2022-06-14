@@ -1,5 +1,5 @@
 <template>
-  <button type="submit">
+  <button type="submit" class = "text-white border border-white px-2 py-1 rounded-lg">
     Cerca
   </button>
 </template>

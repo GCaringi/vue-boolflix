@@ -1,16 +1,18 @@
 <template>
   <main class = "bg-[color:var(--clr-primary)] min-h-screen text-white">
-    <ul class = "flex list-none grid grid-cols-5">
-        <li
-        v-for = "(element, index) in filterItems"
-        :key = "index"
-        class = ""
-        >
-            <card
-            :elem = "element"
-            />
-        </li>
-    </ul>    
+    <div class = "container m-auto pt-4">
+        <ul class = "flex list-none grid grid-cols-5 gap-5">
+            <li
+            v-for = "(element, index) in filterItems"
+            :key = "index"
+            class = ""
+            >
+                <card
+                :elem = "element"
+                />
+            </li>
+        </ul>    
+    </div>
   </main>
 </template>
 

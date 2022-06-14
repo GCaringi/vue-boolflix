@@ -3,42 +3,22 @@
     <card-img
         :url = getUrl()
     />
-    <card-title
-        :title = "elem.title || elem.name"
+    <card-over
+      :elem = "elem"
     />
-    <card-original-title
-        :originalTitle = "elem.original_title || elem.original_name"
-    />
-    <cardFlag
-        :language = "elem.original_language"
-    />
-    {{average}}
-    <average-stars
-        :value = "average"
-    />
-
-</div>
+    </div>
 </template>
 
 <script>
 
 import cardImg from '../atoms/a.cardImg.vue';
-import cardTitle from '../atoms/a.cardTitle.vue'
-import cardOriginalTitle from '../atoms/a-cardOriginalTitle.vue'
-import cardFlag from '../atoms/a-cardFlag.vue'
-import averageStars from '../atoms/a-averageStar.vue'
+import cardOver from '../molecules/m.cardOverlay.vue'
 
 export default {
     name: "cardItem",
     props: {
         elem: {
             type: Object,
-        }
-    },
-    data() {
-        return {
-            flag: true,
-            average: this.elem.vote_average / 2,
         }
     },
     methods: {
@@ -53,15 +33,11 @@ export default {
     },
     components: {
         cardImg,
-        cardTitle,
-        cardOriginalTitle,
-        cardFlag,
-        averageStars,
-
+        cardOver,
     }
 }
 </script>
 
-<style lang = "scss">
+<style>
 
 </style>
