@@ -1,5 +1,5 @@
 <template>
-  <div class="relative overflow-hidden"> 
+  <div class="relative overflow-hidden rounded-lg"> 
     <card-img
         :url = getUrl()
         class = "m-card shadow-red-900 shadow-md"

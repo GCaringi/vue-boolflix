@@ -1,5 +1,5 @@
 <template>
-  <lang-flag :iso = language /> 
+  <lang-flag class= "text- rounded-full" :iso = language /> 
 </template>
 
 <script>

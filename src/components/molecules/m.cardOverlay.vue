@@ -1,5 +1,5 @@
 <template>
-  <div class = "m-overlay absolute bottom-0 left-0 bg-red-900 z-10 w-full h-1/2 overflow-auto text-black">
+  <div class = "m-overlay absolute bottom-0 left-0 z-10 w-full h-1/2 overflow-auto text-black flex justify-center flex-col">
     <card-title
         :title = "elem.title || elem.name"
     />
@@ -9,10 +9,10 @@
     <cardFlag
         :language = "elem.original_language"
     />
-    {{average}}
     <average-stars
         :value = "average"
     />
+    {{average}}
   </div>
 </template>
 
