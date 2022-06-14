@@ -1,7 +1,8 @@
 <template>
-  <div>
+  <div class="relative overflow-hidden"> 
     <card-img
         :url = getUrl()
+        class = "m-card shadow-red-900 shadow-md"
     />
     <card-over
       :elem = "elem"
@@ -38,6 +39,20 @@ export default {
 }
 </script>
 
-<style>
+<style lang = "scss">
+
+.m-card:hover{
+    transform: scale(1.05); 
+}
+
+.m-card:hover + .m-overlay{
+    transform: translateY(0);
+    transition: transform 250ms ease;
+
+}
+
+.m-overlay:hover{
+    transform: translateY(0);
+}
 
 </style>

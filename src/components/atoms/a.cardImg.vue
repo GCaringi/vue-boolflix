@@ -1,5 +1,7 @@
 <template>
-  <img :src = url  alt="">
+  <img :src = url  alt=""
+        class = "h-[28rem] w-full"
+    >
 </template>
 
 <script>
